@@ -27,7 +27,8 @@ def get_answer(messages):
     system_message = [{"role": "system", "content": INITIAL_PROMPT}]
     messages = system_message + messages
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo-1106",
+        # model="gpt-3.5-turbo-1106",
+        model="gpt-4o",
         messages=messages
     )
     return response.choices[0].message.content
